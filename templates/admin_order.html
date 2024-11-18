@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='001.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>管理員頁面</title>
+</head>
+<body class="otherbody">
+
+<div id="sidebar" onmouseover="expandSidebar()" onmouseout="collapseSidebar()">
+    <div class="toggle" onmouseover="expandSidebar()" onmouseout="collapseSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div id="settings">
+        <form action="{{ url_for('admin_order') }}" method="get">
+            <input type="submit" value="全部訂單" class="button1">
+        </form>
+        <form action="{{ url_for('admin_history') }}" method="get">
+            <input type="submit" value="歷史紀錄" class="button1">
+        </form>
+        
+        <a href="{{ url_for('logout') }}" style="color: white;">登出</a>
+
+    </div>
+</div>
+
+<div id="content" >    
+    <h1>拿取全部訂單，選擇您要的時間</h1>
+        <form id="lifepath-form" action="/dashboard/admin/order" method="post">
+            <label for="birthdate">請輸入你要的訂單日期 (YYYY-MM-DD)</label>
+            <input type="date" id="specied order" name="specied order" required>
+            <button type="submit"  class="button2">提交</button>
+        </form>
+    <div id="result"></div>
+    {% if request_method == 'POST' %}
+    <div>
+        <div>
+            <br>
+            <table border="1">
+                <tr>
+                    <td width="100">Date</td>
+                    <td width="100">Time</td>
+                    <td width="100">party_name</td>
+                    <td width="150">writen time</td>
+                </tr>
+                {% for order in orders %}
+                <tr>
+                    <td width="100">
+                        {{ order['Date'] }}
+                    </td>
+                    <td width="100">
+                        {{ order['time'] }}
+                    </td>
+                    <td width="100">
+                        {{ order['party_name'] }}
+                    </td>
+                    <td width="100">
+                        {{ order['writetime'] }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+    </div>
+    {% endif %}
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

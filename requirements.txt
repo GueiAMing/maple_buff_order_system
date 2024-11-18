@@ -1,0 +1,7 @@
+
+line-bot-sdk
+Flask
+Flask-SocketIO
+Flask-Login
+pymongo
+uwsgi

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='001.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>使用者頁面</title>
+</head>
+<body class="otherbody">
+<div id="sidebar" onmouseover="expandSidebar()" onmouseout="collapseSidebar()">
+    <div class="toggle" onmouseover="expandSidebar()" onmouseout="collapseSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div id="settings">
+        <div>
+            <span>歡迎, {{ current_user.id }}</span>
+            <div>這是你可以使用的功能</div>
+        </div>
+    
+        <form action="/dashboard/user/history" method="post">
+            <input type="submit" value="歷史紀錄" class="button1">
+        </form>
+        
+        <a href="{{ url_for('logout') }}" style="color: white;">登出</a>
+
+    </div>
+</div>
+
+<div id="content">
+    <h1>您的歷史訂單如下：</h1>
+   
+    <div id="result">
+        
+    </div>
+    {% if request_method == 'POST'  and "查無資料" in orders[0]%}
+    <div>
+        {{ orders[0] }}
+    </div>
+    {% else %}
+    <div>
+        <div>
+            <br>
+            <table border="1">
+                <tr>
+                    <td width="150">日期</td>
+                    <td width="150">地點(頻道)</td>
+                    <td width="150">組隊角色</td>
+                    <td width="150">交易角色</td>
+                    <td width="150">訂單成立時間</td>
+                </tr>
+                {% for order in orders %}
+                <tr>
+                    {% for data in order %}
+                        <td width="150">
+                            {{ data }}
+                        </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+    </div>
+    {% endif %}
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

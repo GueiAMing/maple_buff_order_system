@@ -1,0 +1,5 @@
+write_yeardate_time,userid,nickname,action,yeardate,time,tradename,partyname,location,remark
+2024-09-25T00:57,U66da2ba27e83014da52f28455ef19c7c,安安,Insert,2024-09-25,23:30,安,安安,六條岔道,安安，暫時資料庫的資料寫入最終訂單
+2024-09-25T01:00,U66da2ba27e83014da52f28455ef19c7c,安安,Insert,2024-09-25,23:35,喔喔,噁噁,六條岔道,安安，暫時資料庫的資料寫入最終訂單
+2024-09-25T01:01,U66da2ba27e83014da52f28455ef19c7c,安安,Delete,2024-09-25,23:30,,,六條岔道,安安，刪除23:30的訂單
+2024-09-25T01:01,U66da2ba27e83014da52f28455ef19c7c,安安,Insert,2024-09-25,23:25,安安,安安,六條岔道,安安，暫時資料庫的資料寫入最終訂單

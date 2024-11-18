@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='001.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>歡迎頁面</title>
+</head>
+<body class="indexbody">
+
+   <h2>歡迎您的到來，這裡可查詢過往訂單</h2>
+   <div style="margin-top: 20px;">    
+    <a href="/login" style="color: black;">按此進入登入頁面</a>
+   </div>
+   <div style="margin-top: 20px;"> 可先掃下方qrcode加入line官方帳號體驗更完整內容，或搜尋line@id: @391rmckc</div>
+   <div style="margin-top: 20px;">    
+    <img src="{{ url_for('static', filename='line_bot_qrcode.png') }}" alt="logo" style="width: 200px; height: 200px;">
+   </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+   
+</body>
+</html>

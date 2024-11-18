@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='001.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>會員登入</title>
+</head>
+<body class="indexbody">
+
+    <div class="container">
+        <h1>登入</h1>
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="username">帳號:</label>
+            <input type="text" name="username" id="username" required>
+            <br>
+            <label for="password">密碼:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <!-- 顯示錯誤訊息 -->
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                
+                    {% for message in messages %}
+                    <div style="color: red; font-size: 18px;">{{ message }}</div>
+                    {% endfor %}
+                
+                {% endif %}
+                {% endwith %}
+            
+                <button type="submit" style="margin-top: 20px; ">登入</button>
+                <div style="margin-top: 20px;">
+                    <a href="/register" style="color: gray;">註冊</a>
+                </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+   
+</body>
+</html>
