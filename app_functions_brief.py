@@ -1,3 +1,5 @@
+#ver1.3 引入函數庫並縮寫，伺服器運行的版本
+
 from __future__ import unicode_literals
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
