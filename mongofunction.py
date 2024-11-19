@@ -1,3 +1,4 @@
+#ver1.2 跟mongoDB有關的函式(CRUD)，都在這裡
 import pymongo
 import json
 import configparser
