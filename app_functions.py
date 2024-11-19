@@ -1,3 +1,4 @@
+#ver1.1 新建函式庫，縮短主程式行數，1566 -> 331行
 from __future__ import unicode_literals
 from flask import Flask, request, abort, render_template
 from linebot.v3 import (
