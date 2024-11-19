@@ -1,5 +1,6 @@
 # Copyright © https://steam.oxxostudio.tw
 
+#ver1.0 每日固定時間由官方帳號推送訂單到我自己的line帳號，用crontab設定，現已停用
 from linebot import LineBotApi, WebhookHandler
 # 載入對應的函式庫
 from linebot.models import FlexSendMessage, BubbleContainer, ImageComponent
