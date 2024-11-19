@@ -1,3 +1,4 @@
+#ver1.0每日23:30就會執行以便更新點數，用crontab設定
 from datetime import datetime, timedelta, timezone
 import threading
 import pymongo
