@@ -1,3 +1,4 @@
+#ver1.2 新增line message的文字函式庫，純文字都在這裡
 from mongofunction import dbmethod
 import threading
 
