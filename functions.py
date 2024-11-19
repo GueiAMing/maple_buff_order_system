@@ -1,3 +1,4 @@
+#ver1.1 同時新增函式庫，這裡主要放line message的函式
 from mongofunction import dbmethod
 from datetime import datetime, timedelta, timezone
 import time
