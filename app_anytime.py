@@ -1,3 +1,4 @@
+#ver1.0 取消時間限制，修改時間經常超過下單時間(22:00)，所以需要解除限制
 from __future__ import unicode_literals
 from flask import Flask, request, abort, render_template
 from linebot.v3 import (
