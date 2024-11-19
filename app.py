@@ -1,3 +1,4 @@
+#ver1.0 把所有函式都寫在這裡
 from __future__ import unicode_literals
 from flask import Flask, request, abort, render_template
 from linebot.v3 import (
