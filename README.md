@@ -22,6 +22,7 @@
 
 - 加入官方帳號，即可獲得一點點數，消費一次累積一點，滿五點可免費兌換一次功能。
 - 親自設計預約流程，參考[Line message api](https://developers.line.biz/en/reference/messaging-api/#common-specifications)，設計一套預約流程。
+- ![get reward card](https://truth.bahamut.com.tw/s01/202411/b048c4570a1b3209fe70a48819ab35ab.PNG)
 - 
 列出專案的主要功能，並簡要描述每個功能的作用。
 
